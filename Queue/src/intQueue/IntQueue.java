@@ -35,7 +35,7 @@ public class IntQueue {
 		else{
 			total++;
 			q[rear] = item;
-			rear++;
+			rear = (rear+1) % size;//this will take to the pointer to first index automatically when its reach to the last index wheather its front or rear 
 			return true;
 		}
 	}
@@ -43,7 +43,7 @@ public class IntQueue {
 	public int dequeue(){
 		int item= q[front];
 		total--;//once item is dequeue then total should be decreasing
-		front++;//front should be increasing
+		front = (front + 1) % size; //this will take to the pointer to first index automatically when its reach to the last index wheather its front or rear 
 		return item;
 	}
 	/*
@@ -54,6 +54,19 @@ public class IntQueue {
 			return true;
 		} else {
 			return false;
+		}
+	}
+	
+	/*
+	 * This function will print all the value inside the array
+	 */
+	public void showAll(){
+		int f = front;//pointer to the front
+		if(total !=0){
+			for(int i = 0; i< total; i++){
+				System.out.println(" " +q[f]);
+				f= (f+1)%size;
+			}
 		}
 	}
 }
