@@ -27,9 +27,23 @@ public class IntStack {
 	
 	//Function
 	public boolean push(int item){
-		top++;//increasing the top as array do not contain -1 value
-		stack[top] = item;
-		return true;	
+		if(isFull()){
+			top++;//increasing the top as array do not contain -1 value
+			stack[top] = item;
+			return true;	
+		} else{
+			return false;
+		}
+		 
+	}
+	//once you pop the top value then need to decrement so top now --
+	public int pop(){
+		return stack[top--];
+	}
+	//if pop is empty then we do not need to pop any item 
+	//so we need another function
+	public boolean isEmpty(){
+		return (top == -1);
 	}
 	
 	/*
