@@ -13,7 +13,7 @@ public class IntQueue {
 		size =100;
 		total = 0;
 		front = 0;
-		rear = 0;
+		rear = 0;//to enter the value
 		q = new int [size];
 	}
 	//2nd Constructor with size parameter if you want to increase the size
