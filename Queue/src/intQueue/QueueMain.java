@@ -19,9 +19,16 @@ public class QueueMain {
 		//when function is void and there's no return
 		//we can simply call the function without system.out.println
 		
-		intQueue.showAll();
+		//intQueue.showAll();
 		
+		//Creating PersonQueue object
+		PersonQueue personQueue = new PersonQueue();
+		//Creating new Person object
+		personQueue.enqueue(new Person("Mohammed", "123"));
+		personQueue.enqueue(new Person("Jahangir", "456"));
+		personQueue.enqueue(new Person("Chowdhury", "789"));
 		
+		personQueue.showAll();
 	}
 
 }
