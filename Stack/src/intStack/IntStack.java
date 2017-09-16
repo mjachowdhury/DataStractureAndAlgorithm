@@ -27,7 +27,7 @@ public class IntStack {
 	
 	//Function
 	public boolean push(int item){
-		if(isFull()){
+		if(!isFull()){
 			top++;//increasing the top as array do not contain -1 value
 			stack[top] = item;
 			return true;	
