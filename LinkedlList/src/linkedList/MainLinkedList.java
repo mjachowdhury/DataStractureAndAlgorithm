@@ -10,6 +10,11 @@ public class MainLinkedList {
 		
 		list.ShowAllNode();//it will print reverse list
 		//anything we entered it be in the lst
+		
+		System.out.println();
+		
+		list.deleteItem(5);
+		list.ShowAllNode();
 	}
 
 }
